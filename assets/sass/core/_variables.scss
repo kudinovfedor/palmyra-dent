@@ -2,12 +2,12 @@ $debug: false !default;
 $image-url-path: "assets/img/" !default;
 $font-url-path: "assets/fonts/" !default;
 
-$borderRadius: 0px;
-$shadow: 0 0 10px rgba(#000, .2);
+$borderRadius: 0;
+$shadow: 0 0 0 1px #45aaff;
 
 // BRAND
-$themeColorOne: #2c3e50; // header, menu, footer, title,
-$themeColorTwo: #e74c3c; // menu active item, button, footer link hover, woo
+$themeColorOne: #304770; // header, menu, footer, title,
+$themeColorTwo: #304770; // menu active item, button, footer link hover, woo
 $themeColorThree: #3498db; // preHeader bg, wooOnSale
 $themeColorFour: #2980b9; //menu hover item, table border, preHeader font
 
@@ -20,12 +20,12 @@ $bodyBgColor: #fff; //white
 $bodyFontColor: #000; // black
 
 // PreHeader
-$preHeaderBgColor: $themeColorThree;
-$preHeaderColor: $themeColorFour;
+$preHeaderBgColor: #304770;
+$preHeaderColor: #fff;
 
 // HEADER
-$headerBgColor: $themeColorOne;
-$headerFontColor: #fff;
+$headerBgColor: #fff;
+$headerFontColor: #304770;
 $headerHighlightBgColor: $themeColorTwo;
 $headerHighlightColor: #fff;
 
@@ -36,7 +36,7 @@ $menuFontColor: #fff;
 $menuFontColorActive: #fff;
 
 $navArrowColor: #fff;
-$navHeaderMobileBGColor: #232323;
+$navHeaderMobileBGColor: #fff;
 $navHamburgerMobileColor: $themeColorTwo;
 
 // Menu mobile
@@ -59,7 +59,7 @@ $menu-close-color: $themeColorTwo;
 $menuContainerMobilePaddingTop: 30%;
 
 // FOOTER
-$footerBgColor: $themeColorOne;
+$footerBgColor: #304770;
 $footerFontColor: #fff;
 $footerLinkColorActive: darken($footerFontColor, 5%);
 
@@ -77,7 +77,7 @@ $linkFontColorActive: lighten($linkFontColor, 20%);
 // BUTTONS
 $buttonFontColor: #fff;
 $buttonFontColorActive: #fff;
-$buttonBgColor: $themeColorTwo;
+$buttonBgColor: #45aaff;
 $buttonBgColorActive: darken($buttonBgColor, 10%);
 $buttonBorderColor: $themeColorTwo;
 $buttonOutlinedFirstColor: $themeColorTwo;

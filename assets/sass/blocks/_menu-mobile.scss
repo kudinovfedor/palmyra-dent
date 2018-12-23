@@ -32,20 +32,21 @@
 }
 
 .nav {
-    display: block;
     position: relative;
-    margin: 10px 15px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
-    border-radius: 4px;
     text-align: center;
+    margin: 0 auto;
+
     .menu {
-        @extend %reset-list;
-        font-size: 0;
+        &,
+        &-container {
+            @extend %reset-list;
+            font-size: 0;
+        }
 
         &-item {
             display: inline-block;
             vertical-align: middle;
-            padding: 5px;
+            padding: 0 15px;
 
             .menu-item-has-children-arrow {
                 display: none;
@@ -116,6 +117,7 @@
             &.current-menu-ancestor {
                 .menu-link {
                     text-decoration: none;
+                    border-bottom-color: #304770;
                 }
             }
 
@@ -130,13 +132,15 @@
 
         &-link {
             display: block;
-            padding: 8px 10px;
-            color: #000;
-            font-size: 16px;
-            line-height: 1.3;
+            padding: 3px 5px;
+            color: #304770;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.5;
             text-align: center;
             text-transform: none;
             text-decoration: none;
+            border-bottom: 1px solid transparent;
             @extend %smooth_animation;
         }
     }

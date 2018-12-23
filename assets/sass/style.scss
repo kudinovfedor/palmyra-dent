@@ -19,7 +19,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "core/fonts";
 @import "core/wp-core";
 @import "core/help-style";
-//@import "core/flexbox";
+@import "core/flexbox";
 
 // PLUG-INs
 @import "plugins/font-awesome/font-awesome";
@@ -43,8 +43,8 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "elements/responsive-titles";
 @import "elements/scroll-top";
 @import "elements/forms";
-//@import "elements/buttons";
-@import "elements/buttons-2";
+@import "elements/buttons";
+//@import "elements/buttons-2";
 @import "elements/links";
 @import "elements/pagination";
 @import "elements/tables";
@@ -104,7 +104,7 @@ body {
     min-height: 100%;
 
     @media #{$mobile} {
-        padding-top: 80px;
+        padding-top: 70px;
     }
 }
 
@@ -172,4 +172,91 @@ img {
 
 .is-hide {
     display: none;
+}
+
+@media only screen and (max-width: 930px) {
+    .footer {
+        &-before {
+            .footer-item {
+                margin-bottom: 5px;
+            }
+        }
+
+        &-after {
+            display: block;
+
+            .footer-item {
+                display: inline-block;
+                margin: 0 10px 5px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        &-before {
+            display: block;
+            text-align: center;
+
+            .footer-logo {
+                margin-bottom: 10px;
+            }
+
+            .footer-btn {
+                margin-bottom: 0;
+            }
+        }
+
+        &-before,
+        &-after {
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 544px) {
+    .header {
+        &-logo {
+            display: none;
+        }
+
+        &-item {
+            text-align: center;
+        }
+
+        &-main {
+            padding: 10px 0;
+        }
+
+        .container {
+            display: block;
+        }
+    }
+
+    .nav .menu {
+        &-item {
+            .no-touch &:hover,
+            &-current,
+            &.current-menu-parent,
+            &.current-menu-ancestor {
+                .menu-link {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &-link {
+            border-bottom: 0;
+        }
+    }
+
+    .footer {
+        &-copyright {
+            .footer-item {
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
 }

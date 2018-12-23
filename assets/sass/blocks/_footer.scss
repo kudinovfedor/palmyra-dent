@@ -3,6 +3,65 @@
     right: 0;
     bottom: 0;
     left: 0;
+    background-color: $footerBgColor;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+
+    &-before {
+        padding: 13px 0;
+
+        .menu {
+            &-item {
+                .no-touch &:hover,
+                &-current,
+                &.current-menu-parent,
+                &.current-menu-ancestor {
+                    .menu-link {
+                        border-bottom-color: #fff;
+                    }
+                }
+            }
+
+            &-link {
+                color: #fff;
+            }
+        }
+    }
+
+    &-after {
+        padding: 13px 0;
+        border-top: 1px solid #3d82c6;
+
+        a {
+            color: currentColor;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-copyright {
+        padding: 5px 0;
+        background-color: #fff;
+        color: #304770;
+        font-size: 12px;
+        line-height: 1.5;
+
+        .footer-item {
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        a {
+            color: #304770;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 .pre-footer {

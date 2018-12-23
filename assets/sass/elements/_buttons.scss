@@ -45,15 +45,21 @@ button {
     font-size: 14px;
 }
 
+.button-block {
+    display: block;
+    width: 100%;
+}
+
 .button-inverse {
     @extend %button-style;
-    color: $buttonFontColorActive;
-    background-color: $buttonBgColorActive;
+    color: $buttonFontColor;
+    border-color: #304770;
+    background-color: $buttonBgColor;
 
     &:hover,
     &:active {
-        color: $buttonFontColor;
-        background-color: $buttonBgColor;
+        color: $buttonFontColorActive;
+        background-color: $buttonBgColorActive;
     }
 }
 
@@ -126,12 +132,12 @@ button {
 
     .button-medium {
         padding: 12px 32px;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .button-small {
         padding: 9px 18px;
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
@@ -143,7 +149,7 @@ button {
 
     .button-medium {
         padding: 13px 35px;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .button-small {

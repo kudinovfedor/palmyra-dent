@@ -6,9 +6,33 @@
 
 .page-header {
     padding: 10px 0;
-    background-color: $headerBgColor;
-    color: $headerFontColor;
+
 }
+
+.header {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $headerFontColor;
+    background-color: $headerBgColor;
+    box-shadow: 0 1px 9px rgba(#000, .12);
+
+
+    &-before {
+        padding: 5px 0;
+        color: $preHeaderColor;
+        background-color: $preHeaderBgColor;
+
+        .header-item {
+            padding: 0 2px;
+            margin: 0 auto;
+        }
+    }
+
+    &-main {
+       padding: 15px 0;
+    }
+}
+
 
 .logo {
     &,
@@ -33,10 +57,14 @@
     }
 
     &-number {
+        font-size: 14px;
+        line-height: 1.5;
         display: inline-block;
         text-decoration: none;
+        color: inherit;
 
         &:hover {
+            color: #fff;
             text-decoration: underline;
         }
     }
@@ -56,11 +84,17 @@
     }
 
     &-link {
+        color: inherit;
+        font-size: 14px;
+        line-height: 1.5;
         display: block;
+        padding: 0 3px;
         text-align: center;
         text-decoration: none;
 
         &:hover {
+            color: #fff;
+            opacity: .8;
         }
     }
 }
@@ -90,6 +124,7 @@
 
 .lang {
     @extend %reset-list;
+    font-size: 0;
 
     &,
     &-item {
@@ -98,9 +133,35 @@
     }
 
     &-item {
-        margin: 0 5px;
+        margin: 0;
+        position: relative;
+
+        & + & {
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 1px;
+                height: 15px;
+                background-color: #fff;
+            }
+        }
+
+        &:hover,
+        &.current-lang {
+            a {
+                opacity: .8;
+            }
+        }
 
         a {
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 0 5px;
+            color: inherit;
             display: block;
         }
     }

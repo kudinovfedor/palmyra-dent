@@ -17,17 +17,16 @@
                 <div class="footer-item footer-logo">
                     <div class="logo"><?php get_default_logo_link('logo-f.png'); ?></div>
                 </div>
-                <?php if (has_nav_menu('main-nav')) { ?>
-                    <nav class="footer-item footer-nav nav js-menu">
-                        <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
+                <?php if (has_nav_menu('second-menu')) { ?>
+                    <nav class="footer-item footer-nav nav">
                         <?php wp_nav_menu(array(
-                            'theme_location' => 'main-nav',
+                            'theme_location' => 'second-menu',
                             'container' => false,
                             'menu_class' => 'menu-container',
                             'menu_id' => '',
-                            'fallback_cb' => 'wp_page_menu',
+                            'fallback_cb' => false,
                             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                            'depth' => 3
+                            'depth' => 1
                         )); ?>
                     </nav>
                 <?php } ?>

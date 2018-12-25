@@ -94,12 +94,14 @@
             &-has-children {
                 position: relative;
                 padding-right: 15px;
+
                 &:hover {
                     &::after {
                         top: 8px;
                         transform: scale(-1);
                     }
                 }
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -163,29 +165,32 @@
             .menu-item-has-children-arrow {
                 display: none;
             }
+
             &-has-children {
                 position: relative;
-                padding-right: 15px;
+                padding-right: 0;
+
                 &:hover {
                     &::after {
-                        top: 14px;
-                        transform: scale(-1);
+                        border-left-color: #fff;
                     }
                 }
+
                 &::after {
                     content: "";
                     position: absolute;
-                    top: 19px;
+                    top: 12px;
                     right: 5px;
                     border: 5px solid #000;
-                    border-color: #000 transparent transparent transparent;
-                    transition: transform 0.3s ease-in-out;
+                    border-color: transparent transparent transparent #000;
+                    transition: border-color .3s ease-in-out;
                 }
             }
 
             .no-touch &:hover,
             &-current {
                 > .sub-menu-link {
+                    color: #fff;
                     background-color: $menuMobileSubMenuBGOnHover;
                 }
             }

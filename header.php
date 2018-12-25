@@ -64,18 +64,26 @@
                         </ul>
                     </div>
                 <?php } ?>
-                <?php if (function_exists('pll_the_languages')) { ?>
+                
+                <?php /** if (function_exists('pll_the_languages')) { ?>
                     <div class="header-item header-lang">
                         <ul class="lang">
                             <?php pll_the_languages(array(
                                 'show_flags' => 0,
                                 'show_names' => 1,
                                 'hide_if_empty' => 0,
-                                'display_names_as' => 'slug'
+                                'display_names_as' => 'name'
                             )); ?>
                         </ul>
                     </div>
-                <?php } ?>
+                <?php } **/ ?>
+                <div class="header-item header-lang">
+                    <ul class="lang">
+                        <li class="lang-item"><a href="">Рус</a></li>
+                        <li class="lang-item"><a href="">Eng</a></li>
+                        <li class="lang-item"><a href="">عربي</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="header-main">
